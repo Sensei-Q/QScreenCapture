@@ -206,7 +206,7 @@ public class QScreenCapture {
               } catch( FormatException e ) {
                  Console.Error.WriteLine( e.Message );
                  Environment.Exit( 20 );
-				  }
+              }
            } else if( arg.Equals( "-y" ) ) {
               i++;
               try {
@@ -215,7 +215,7 @@ public class QScreenCapture {
               } catch( FormatException e ) {
                  Console.Error.WriteLine( e.Message );
                  Environment.Exit( 20 );
-				  }
+              }
            } else if( arg.Equals( "--width" ) ) {
               i++;
               try {
@@ -224,7 +224,7 @@ public class QScreenCapture {
               } catch( FormatException e ) {
                  Console.Error.WriteLine( e.Message );
                  Environment.Exit( 20 );
-				  }
+              }
            } else if( arg.Equals( "--height" ) ) {
               i++;
               try {
@@ -233,33 +233,33 @@ public class QScreenCapture {
               } catch( FormatException e ) {
                  Console.Error.WriteLine( e.Message );
                  Environment.Exit( 20 );
-				  }
+              }
            } else if( i == args.Length - 1 ) {
               filename = args[ i ];
            } else {
                Console.Error.WriteLine( "Unknown argument \"{0}\"!", arg );
                Environment.Exit( 20 );
-			  }
+           }
         }
 
         if( !String.IsNullOrEmpty( filename ) ) {
-	        if( datestamp ) {
-	           string extension = Path.GetExtension( filename );
-	           filename = filename.Substring( 0, filename.Length - extension.Length );
-	           filename = filename + DateTime.Now.ToString( dateformat ) + extension;
-	        }
-	
-	        try {
-	           CaptureScreenToFile( filename, rectangle );
-	           if( verbose ) Console.WriteLine( "Screen captured to " + filename );
-	        } catch( Exception e ) {
-	           Console.Error.WriteLine( e.Message );
-	           Environment.Exit( 20 );
-	        }
-	     } else {
+           if( datestamp ) {
+              string extension = Path.GetExtension( filename );
+              filename = filename.Substring( 0, filename.Length - extension.Length );
+              filename = filename + DateTime.Now.ToString( dateformat ) + extension;
+           }
+   
+           try {
+              CaptureScreenToFile( filename, rectangle );
+              if( verbose ) Console.WriteLine( "Screen captured to " + filename );
+           } catch( Exception e ) {
+              Console.Error.WriteLine( e.Message );
+              Environment.Exit( 20 );
+           }
+        } else {
            Console.Error.WriteLine( "Required argument is missing!" );
            Environment.Exit( 20 );
-		  }
+        }
      } else {
         Help();
      }

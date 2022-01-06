@@ -13,7 +13,7 @@
 // QScreenCapture -v -x 200 -y 100 --width 500 --height 700 -d -df HHmmss pic.png
 // QScreenCapture -v -s 2 -d C:\Users\[user-name]\Pictures\second_monitor.png
 //
-// TODO: add support for mouse pointer!
+// TODO: add support for the mouse pointer!
 
 using System;
 using System.IO;

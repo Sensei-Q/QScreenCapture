@@ -6,7 +6,7 @@ set QROOT="[edit-me]"
 set PICTURES="C:\Users\[user-name-edit-me]\Pictures"
 set OPTIONS=-v -d
 set DELAY=1
-echo Screen grabbing to folder %PICTURES% delay %DELAY% second(s)..
+echo Screen grabbing to the %PICTURES% folder with a delay of %DELAY% second(s)..
 :loop
    %QROOT%\QScreenCapture %OPTIONS% %PICTURES%\picture.png
    TIMEOUT %DELAY% > nul

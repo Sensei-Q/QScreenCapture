@@ -7,7 +7,7 @@ SET PICTURES=C:\Users\[user-name-edit-me]\Pictures\Screen-shots\
 SET OPTIONS=-v -d
 
 :: Delay in seconds.
-SET DELAY=15
+SET DELAY=1
 
 :: Set to 0 to have an infinite loop.
 :: Set to >0 to have an finite loop.

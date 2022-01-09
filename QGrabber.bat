@@ -1,4 +1,4 @@
-:: QGrabber.bat v1.2.1 (c) 2022 Sensei (aka 'Q')
+:: QGrabber.bat v1.2.2 (c) 2022 Sensei (aka 'Q')
 :: A batch script for Windows that waits a specified number of seconds and takes a screenshot in a loop.
 ::
 @echo off
@@ -7,11 +7,11 @@ SET PICTURES=C:\Users\[user-name-edit-me]\Pictures\Screen-shots\
 SET OPTIONS=-v -d
 
 :: Delay in seconds.
-SET DELAY=1
+SET DELAY=15
 
 :: Set to 0 to have an infinite loop.
 :: Set to >0 to have an finite loop.
-SET COUNT=0
+SET COUNT=4
 
 ECHO Screen grabbing to the %PICTURES% folder with a delay of %DELAY% second(s)..
 IF %COUNT%==0 ECHO Infinite loop. Use Ctrl-C to break it.
@@ -21,6 +21,6 @@ IF %COUNT%==0 ECHO Infinite loop. Use Ctrl-C to break it.
    SET /A COUNT-=1
    IF %COUNT%==0 GOTO end
 :next
-   TIMEOUT %DELAY% > nul
+   "%QROOT%QTimeout" %DELAY%
 GOTO loop
 :end

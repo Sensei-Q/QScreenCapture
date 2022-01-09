@@ -1,9 +1,9 @@
-:: QGrabber.bat v1.2 (c) 2022 Sensei (aka 'Q')
+:: QGrabber.bat v1.2.1 (c) 2022 Sensei (aka 'Q')
 :: A batch script for Windows that waits a specified number of seconds and takes a screenshot in a loop.
 ::
 @echo off
-SET QROOT="[edit-me]\"
-SET PICTURES="C:\Users\[user-name-edit-me]\Pictures\Screen-shots\"
+SET QROOT=[edit-me]\
+SET PICTURES=C:\Users\[user-name-edit-me]\Pictures\Screen-shots\
 SET OPTIONS=-v -d
 
 :: Delay in seconds.

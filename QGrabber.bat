@@ -11,7 +11,7 @@ SET DELAY=1
 
 :: Set to 0 to have an infinite loop.
 :: Set to >0 to have an finite loop.
-SET COUNT=4
+SET COUNT=0
 
 ECHO Screen grabbing to the %PICTURES% folder with a delay of %DELAY% second(s)..
 IF %COUNT%==0 ECHO Infinite loop. Use Ctrl-C to break it.
